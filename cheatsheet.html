@@ -47,6 +47,18 @@ git diff
  git commit -a --amend
  ファイル$fileのバージョンを$idをチェックアウトする
  git checkout $id $file
+○ブランチ
+ git checkout $id
+ ブランチ$idに切り替える
+ git checkout $branch2
+ git merge $branch1
+ ブランチ$branch1を$branch2にマージする
+ git branch $branch
+ HEADから$branchという名前のブランチを作成する
+ git checkout -b $new_branch $other
+ ブランチ$otherからブランチ$new_branchを作成し、$new_branchに切り替える
+ git branch -d $branch
+ ブランチ$branchを削除する
 </pre>
 
 <pre>
