@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 	<head>
 		<meta charset="UTF-8" />
-		<title>ぎっとのちぃとしぃと</title>
+		<title>git cheat sheet by Team "Subversion at Work"</title>
 	</head>
 	<body>
 
@@ -43,22 +43,31 @@ git fetch
 <div>
 <h3>公開</h3>
 <p>ローカルの変更をすべてコミットする</p>
-<code>git commit -a</code>
+<code class="codeInText">git commit -a</code>
 <p>他の開発者向けにパッチを用意する</p>
-<code>git format-patch origin</code>
+<code class="codeInText">git format-patch origin</code>
 <p>変更をoriginに反映する</p>
-<code>git push</code>
+<code class="codeInText">git push</code>
 <p>バージョンやマイルストーンのタグを付ける</p>
-<code>git tag v1.0</code>
+<code  class="codeInText">git tag v1.0</code>
 </div>
 
 <div>
 <h3>マージの競合を解消</h3>
 <p>マージの競合を確認する</p>
-<code>get diff</code>
-<code>get diff -base $file</code>
-<code>get diff -ours $file</code>
-<code>get diff -theirs $file</code>
+<code class="codeInText">get diff</code>
+<code class="codeInText">get diff -base $file</code>
+<code class="codeInText">get diff -ours $file</code>
+<code class="codeInText">get diff -theirs $file</code>
+
+<p>競合しているバッチを捨てる</p>
+<code class="codeInText">git reset -hard</code>
+<code class="codeInText">git rebase -skip</code>
+
+<p>競合を解消してマージする</p>
+<code class="codeInText">git add $conlifting_file</code>
+<code class="codeInText">git rebase -continue</code>
+
 </div>
 
 </pre>
