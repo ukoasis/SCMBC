@@ -11,37 +11,37 @@
 
 <pre>
 <h3 class="fgblock">リポジトリを作成する</h3>
-◯ 既存のファイルを新しいリポジトリへ登録する
+<p>既存のファイルを新しいリポジトリへ登録する</p>
 cd /path/to/project
 git init
 git add
 
-◯ 既存のリポジトリから作成する
+<p>既存のリポジトリから作成する</p>
 git clone ~/existring/repo ~/new/repo
 git clone git://host.org/project.git
 git clone ssh://you@host.org/proj.git
 
 <h3 class="fgblock">リポジトリの状態を表示</h3>
 
-◯ 作業ディレクトリで変更したファイルを表示する
+<p>作業ディレクトリで変更したファイルを表示する</p>
 git status
-◯ 追跡対象のファイルに対する変更を表示する
+<p>追跡対象のファイルに対する変更を表示する</p>
 git diff
-◯ id間の差分をする
+<p>id間の差分をする</p>
 git diff $id1 $id2
   $id1と$id2 は コミット単位に割り当てられるsha1の値
   一意に判断できれば、途中でもよい
-◯ 変更履歴を表示する
+<p>変更履歴を表示する</p>
 git log
-◯ ファイルの変更履歴を差分付きで表示する
+<p>ファイルの変更履歴を差分付きで表示する</p>
 git log -p $file $dir/ec/tory/
-◯ ファイルのどこを誰がいつ変更したかを表示する
+<p>ファイルのどこを誰がいつ変更したかを表示する</p>
 git blame $file
-◯ $idのコミット内容を表示する
+<p>$idのコミット内容を表示する</p>
 git show $id
-◯ 特定$idのファイル$fileを表示
+<p>特定$idのファイル$fileを表示</p>
 git show $id:$file
-◯ ローカルブランチをすべて表示する
+<p>ローカルブランチをすべて表示する</p>
 git branch
 
 </pre>
