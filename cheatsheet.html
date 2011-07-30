@@ -18,9 +18,28 @@
 </pre>
 
 <pre>
-<h1>公開</h1>
-<p>ローカルの変更をすべてコミットする<p>
+
+<div>
+<h3>公開</h3>
+<p>ローカルの変更をすべてコミットする</p>
 <code>git commit -a</code>
+<p>他の開発者向けにパッチを用意する</p>
+<code>git format-patch origin</code>
+<p>変更をoriginに反映する</p>
+<code>git push</code>
+<p>バージョンやマイルストーンのタグを付ける</p>
+<code>git tag v1.0</code>
+</div>
+
+<div>
+<h3>マージの競合を解消</h3>
+<p>マージの競合を確認する</p>
+<code>get diff</code>
+<code>get diff -base $file</code>
+<code>get diff -ours $file</code>
+<code>get diff -theirs $file</code>
+</div>
+
 </pre>
 
 	</body>
