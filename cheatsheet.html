@@ -28,6 +28,15 @@ git add
 ○取り消し
  git reset --hard
  最後にコミットした状態に戻す
+ git revert HEAD
+ 最新のコミットを取り消す
+ git revert $id
+ 指定したコミットを取り消す
+ git commit -a --amend
+ 最新のコミットを修正する
+ git commit -a --amend
+ ファイル$fileのバージョンを$idをチェックアウトする
+ git checkout $id $file
 </pre>
 
 <pre>
