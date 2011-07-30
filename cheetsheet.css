@@ -5,3 +5,11 @@ body {
 	font-size:16px;
 }
 
+.fgblock {
+  font-weight:bold;
+  background-color:#cccccc;
+  padding:0.5em;
+  margin-bottom:1em; margin-top:1.5em;
+  letter-spacing:-0.1em;
+  display:block;}
+

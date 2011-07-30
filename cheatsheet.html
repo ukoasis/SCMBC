@@ -80,36 +80,25 @@ git branch
 </pre>
 
 <pre>
-■リポジトリを更新する。
-◯originから最新の変更を取得する。
+<h4>
+originから最新の変更を取得する。
+</h4>
 git fetch (マージはしない）
-◯originから最新の変更を取得する。
+<h4>
+originから最新の変更を取得する。
+</h4>
 git pull (取得した後、マージする）
-◯他人から届いたパッチを当てる
+<h4>
+他人から届いたパッチを当てる
+</h4>
 git am -3 patch.mbox<br>
 （競合発生時は、git am -resolvedで解消する）
-<br>
-■役に立つコマンド
-◯リグレッションを見つける
-git bisect start（開始）
-git bisect good $id（$idは最後に動作していないバージョン）
-git bisect bad $id（$idは動作しないバージョン）
-git bisect bad/good（badかgoodか、マーク）
-git bisect visualize（gitkを起動して、bisectとマーク）
-git bisect reset（完了したとき）
-
-◯エラーチェックをして、リポジトリをきれいにする
-git fsck
-git gc -prune
-
-◯作業ディレクトリでfoo()を検索する
-git grep "foo()"
 </pre>
 
 <pre>
 
 <div>
-<h3>公開</h3>
+<h3 class="fgblock">公開</h3>
 <p>ローカルの変更をすべてコミットする</p>
 <code>git commit -a</code>
 <p>他の開発者向けにパッチを用意する</p>
@@ -121,7 +110,7 @@ git grep "foo()"
 </div>
 
 <div>
-<h3>マージの競合を解消</h3>
+<h3 class="fgblock">マージの競合を解消</h3>
 <p>マージの競合を確認する</p>
 <code>get diff</code>
 <code>get diff -base $file</code>
