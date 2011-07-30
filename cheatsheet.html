@@ -15,10 +15,32 @@ cd /path/to/project
 git init
 git add
 
-◯既存のリポジトリから作成する
+◯ 既存のリポジトリから作成する
 git clone ~/existring/repo ~/new/repo
 git clone git://host.org/project.git
 git clone ssh://you@host.org/proj.git
+
+■リポジトリの状態を表示
+◯ 作業ディレクトリで変更したファイルを表示する
+git status
+◯ 追跡対象のファイルに対する変更を表示する
+git diff
+◯ id間の差分をする
+git diff $id1 $id2
+  $id1と$id2 は コミット単位に割り当てられるsha1の値
+  一意に判断できれば、途中でもよい
+◯ 変更履歴を表示する
+git log
+◯ ファイルの変更履歴を差分付きで表示する
+git log -p $file $dir/ec/tory/
+◯ ファイルのどこを誰がいつ変更したかを表示する
+git blame $file
+◯ $idのコミット内容を表示する
+git show $id
+◯ 特定$idのファイル$fileを表示
+git show $id:$file
+◯ ローカルブランチをすべて表示する
+git branch
 
 </pre>
 
@@ -30,17 +52,46 @@ git clone ssh://you@host.org/proj.git
  HEAD   : 現在のブランチ
  HEAD^  : HEADの親
  HEAD-4 : HEADの祖父母の祖父母
+○取り消し
+ git reset --hard
+ 最後にコミットした状態に戻す
+ git revert HEAD
+ 最新のコミットを取り消す
+ git revert $id
+ 指定したコミットを取り消す
+ git commit -a --amend
+ 最新のコミットを修正する
+ git commit -a --amend
+ ファイル$fileのバージョンを$idをチェックアウトする
+ git checkout $id $file
+○ブランチ
+ git checkout $id
+ ブランチ$idに切り替える
+ git checkout $branch2
+ git merge $branch1
+ ブランチ$branch1を$branch2にマージする
+ git branch $branch
+ HEADから$branchという名前のブランチを作成する
+ git checkout -b $new_branch $other
+ ブランチ$otherからブランチ$new_branchを作成し、$new_branchに切り替える
+ git branch -d $branch
+ ブランチ$branchを削除する
 </pre>
 
 <pre>
-<div>
 <h4>
 originから最新の変更を取得する。
 </h4>
-<code>
-git fetch
-</code>
-</div>
+git fetch (マージはしない）
+<h4>
+originから最新の変更を取得する。
+</h4>
+git pull (取得した後、マージする）
+<h4>
+他人から届いたパッチを当てる
+</h4>
+git am -3 patch.mbox<br>
+（競合発生時は、git am -resolvedで解消する）
 </pre>
 
 <pre>
