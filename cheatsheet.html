@@ -80,6 +80,7 @@ git branch
 </pre>
 
 <pre>
+<<<<<<< HEAD
 <h4>
 originから最新の変更を取得する。
 </h4>
@@ -93,6 +94,34 @@ git pull (取得した後、マージする）
 </h4>
 git am -3 patch.mbox<br>
 （競合発生時は、git am -resolvedで解消する）
+=======
+■リポジトリを更新する。
+◯originから最新の変更を取得する。
+ git fetch (マージはしない）
+
+◯originから最新の変更を取得する。
+ git pull (取得した後、マージする）
+
+◯他人から届いたパッチを当てる
+ git am -3 patch.mbox
+（競合発生時は、git am -resolvedで解消する）
+<br>
+■役に立つコマンド
+◯リグレッションを見つける
+ git bisect start（開始）
+ git bisect good $id（$idは最後に動作していないバージョン）
+ git bisect bad $id（$idは動作しないバージョン）
+ git bisect bad/good（badかgoodか、マーク）
+ git bisect visualize（gitkを起動して、bisectとマーク）
+ git bisect reset（完了したとき）
+
+◯エラーチェックをして、リポジトリをきれいにする
+ git fsck
+ git gc -prune
+
+◯作業ディレクトリでfoo()を検索する
+ git grep "foo()"
+>>>>>>> 12bdf934f6b158f8df5f90835362a735f292d0db
 </pre>
 
 <pre>
