@@ -44,15 +44,49 @@ git log -p $file $dir/ec/tory/
  HEAD   : 現在のブランチ
  HEAD^  : HEADの親
  HEAD-4 : HEADの祖父母の祖父母
+○取り消し
+ git reset --hard
+ 最後にコミットした状態に戻す
+ git revert HEAD
+ 最新のコミットを取り消す
+ git revert $id
+ 指定したコミットを取り消す
+ git commit -a --amend
+ 最新のコミットを修正する
+ git commit -a --amend
+ ファイル$fileのバージョンを$idをチェックアウトする
+ git checkout $id $file
+○ブランチ
+ git checkout $id
+ ブランチ$idに切り替える
+ git checkout $branch2
+ git merge $branch1
+ ブランチ$branch1を$branch2にマージする
+ git branch $branch
+ HEADから$branchという名前のブランチを作成する
+ git checkout -b $new_branch $other
+ ブランチ$otherからブランチ$new_branchを作成し、$new_branchに切り替える
+ git branch -d $branch
+ ブランチ$branchを削除する
 </pre>
 
 <pre>
+<div>
 <div>
 <h4>
 originから最新の変更を取得する。
 </h4>
 <code>
-git fetch
+git fetch (マージはしない）
+</code>
+</div>
+<div>
+
+<h4>
+originから最新の変更を取得する。
+</h4>
+<code>
+git pull (取得した後、マージする）
 </code>
 </div>
 </pre>
