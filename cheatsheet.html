@@ -99,30 +99,30 @@ git am -3 patch.mbox<br>
 <div>
 <h3>公開</h3>
 <p>ローカルの変更をすべてコミットする</p>
-<code class="codeInText">git commit -a</code>
+<code>git commit -a</code>
 <p>他の開発者向けにパッチを用意する</p>
-<code class="codeInText">git format-patch origin</code>
+<code>git format-patch origin</code>
 <p>変更をoriginに反映する</p>
-<code class="codeInText">git push</code>
+<code>git push</code>
 <p>バージョンやマイルストーンのタグを付ける</p>
-<code  class="codeInText">git tag v1.0</code>
+<code>git tag v1.0</code>
 </div>
 
 <div>
 <h3>マージの競合を解消</h3>
 <p>マージの競合を確認する</p>
-<code class="codeInText">get diff</code>
-<code class="codeInText">get diff -base $file</code>
-<code class="codeInText">get diff -ours $file</code>
-<code class="codeInText">get diff -theirs $file</code>
+<code>get diff</code>
+<code>get diff -base $file</code>
+<code>get diff -ours $file</code>
+<code>get diff -theirs $file</code>
 
 <p>競合しているバッチを捨てる</p>
-<code class="codeInText">git reset -hard</code>
-<code class="codeInText">git rebase -skip</code>
+<code>git reset -hard</code>
+<code>git rebase -skip</code>
 
 <p>競合を解消してマージする</p>
-<code class="codeInText">git add $conlifting_file</code>
-<code class="codeInText">git rebase -continue</code>
+<code>git add $conlifting_file</code>
+<code>git rebase -continue</code>
 
 </div>
 
