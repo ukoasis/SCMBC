@@ -79,6 +79,11 @@ git fetch (マージはしない）
 originから最新の変更を取得する。
 </h4>
 git pull (取得した後、マージする）
+<h4>
+他人から届いたパッチを当てる
+</h4>
+git am -3 patch.mbox<br>
+（競合発生時は、git am -resolvedで解消する）
 </pre>
 
 <pre>
