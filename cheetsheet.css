@@ -13,6 +13,12 @@ body {
   letter-spacing:-0.1em;
   display:block;}
 
+p {
+  font-weight:bold;
+  font-size:14px;
+  text-decoration:underline;
+}
+
 .hoge {
 }
 
