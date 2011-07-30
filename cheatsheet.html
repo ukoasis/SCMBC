@@ -15,11 +15,16 @@ cd /path/to/project
 git init
 git add
 
+◯既存のリポジトリから作成する
+git clone ~/existring/repo ~/new/repo
+git clone git://host.org/project.git
+git clone ssh://you@host.org/proj.git
+
 </pre>
 
 <pre>
-■Gitの基礎
-- Gitの基礎
+■概念
+○Gitの基礎
  master : デフォルトの開発ブランチ
  origin : デフォルトの上流ブランチ
  HEAD   : 現在のブランチ
@@ -29,10 +34,10 @@ git add
 
 <pre>
 <div>
-<code>
-<p>
+<h4>
 originから最新の変更を取得する。
-</p>
+</h4>
+<code>
 git fetch
 </code>
 </div>
