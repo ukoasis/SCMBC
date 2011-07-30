@@ -1,0 +1,24 @@
+body {
+	color:#000000;
+	background-color:#ffffff;
+	fond-family:arial, verdana, sans-serif;
+	font-size:16px;
+}
+
+.fgblock {
+  font-weight:bold;
+  background-color:#cccccc;
+  padding:0.5em;
+  margin-bottom:1em; margin-top:1.5em;
+  letter-spacing:-0.1em;
+  display:block;}
+
+p {
+  font-weight:bold;
+  font-size:14px;
+  text-decoration:underline;
+}
+
+.hoge {
+}
+
