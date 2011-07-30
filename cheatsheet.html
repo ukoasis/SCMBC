@@ -23,8 +23,17 @@ git clone ssh://you@host.org/proj.git
 ■リポジトリの状態を表示
 ◯ 作業ディレクトリで変更したファイルを表示する
 git status
-◯追跡対象のファイルに対する変更を表示する
+◯ 追跡対象のファイルに対する変更を表示する
 git diff
+◯ id間の差分をする
+git diff $id1 $id2
+  $id1と$id2 は コミット単位に割り当てられるsha1の値
+  一意に判断できれば、途中でもよい
+◯ 変更履歴を表示する
+git log
+◯ ファイルの変更履歴を差分付きで表示する
+git log -p $file $dir/ec/tory/
+
 </pre>
 
 <pre>
